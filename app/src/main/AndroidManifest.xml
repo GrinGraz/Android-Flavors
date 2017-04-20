@@ -17,7 +17,12 @@
         </activity>
         <activity
             android:name=".ActivityCompartida"
-            android:label="@string/shared_activity_label"/>
+            android:label="@string/shared_activity_label">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SecondActivity" />
+        </activity>
+
     </application>
 
 </manifest>

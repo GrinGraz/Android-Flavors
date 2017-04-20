@@ -3,9 +3,9 @@ package cl.elmundoalreves.pruebaflavors;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Button;
+import android.view.View;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -17,7 +17,7 @@ public class SecondActivity extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.texto);
         Button button = (Button) findViewById(R.id.button);
 
-        textView.setText(R.string.texto_azul);
+        textView.setText("Texto dinamico para verde");
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,6 +26,6 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
-        getSupportActionBar().setTitle("Segunda actividad azul");
+        getSupportActionBar().setTitle("Segunda actividad verde");
     }
 }

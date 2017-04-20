@@ -16,16 +16,52 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
+        debug {
+            versionNameSuffix " Debug"
+            debuggable true
+        }
     }
+
+    flavorDimensions "color"/*, "api"*/
+
     productFlavors {
         rojo {
             applicationId "cl.elmundoalreves.pruebaflavors.rojo"
             versionName "1.0-rojo"
+
+            dimension "color"
+
+            buildConfigField "boolean", "LOG", "true"
+
+            resValue "string", "URL", "http://www.google.cl"
         }
         azul {
             applicationId "cl.elmundoalreves.pruebaflavors.azul"
             versionName "1.0-azul"
+
+            dimension "color"
+
+            buildConfigField "boolean", "LOG", "true"
+
+            resValue "string", "URL", "http://www.yahoo.cl"
         }
+        /*minApi23 {
+            dimension "api"
+            applicationIdSuffix ".Api23"
+            versionNameSuffix "-Api23"
+            versionName "1.0"
+            versionCode 2 + android.defaultConfig.versionCode
+            minSdkVersion 23
+        }
+        minApi19 {
+            dimension "api"
+            applicationIdSuffix ".Api19"
+            versionNameSuffix "-Api19"
+            versionName "1.0"
+            versionCode 3 + android.defaultConfig.versionCode
+            minSdkVersion 19
+        }*/
     }
 }
 
